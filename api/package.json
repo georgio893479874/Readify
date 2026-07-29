@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "start": "bun src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.4.2",
+    "@libsql/client": "^0.17.4",
+    "@tursodatabase/database": "^0.7.1",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^1.0.0-rc.4",
+    "elysia": "latest",
+    "postgres": "^3.4.9"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "drizzle-kit": "^1.0.0-rc.4",
+    "tsx": "^4.23.1"
+  },
+  "module": "src/index.js"
+}
