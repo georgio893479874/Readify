@@ -16,7 +16,7 @@ new Elysia({
 })
   .use(
     cors({
-      origin: "http://localhost:5173",
+      origin: process.env.WEB_URL,
       methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
       allowedHeaders: ["Content-Type"],
       credentials: true
