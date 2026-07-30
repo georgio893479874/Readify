@@ -16,6 +16,26 @@ export const bookRoutes = new Elysia({
     };
   })
 
+  .get("/:bookId/read", async ({ params, set }) => {
+    const book = await db
+      .select()
+      .from(books)
+      .where(eq(books.id, Number(params.bookId)));
+
+    if (!book.length) {
+      set.status = 404;
+
+      return {
+        success: false,
+      };
+    }
+
+    return {
+      success: true,
+      file: book[0].file,
+    };
+  })
+
   .get("/:bookId", async ({ params, set }) => {
     const result = await db
       .select()

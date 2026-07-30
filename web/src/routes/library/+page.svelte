@@ -86,7 +86,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="mb-10 grid grid-cols-2 gap-6 lg:grid-cols-4">
 			<div class="rounded-3xl bg-white p-8 shadow-sm">
 				<p class="text-sm text-gray-500">Books</p>
@@ -135,6 +134,7 @@
 			<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 				{#each filteredBooks as book}
 					<BookCard
+						id={book.id}
 						title={book.title}
 						author="Unknown Author"
 						image={book.cover || '/placeholder-book.png'}

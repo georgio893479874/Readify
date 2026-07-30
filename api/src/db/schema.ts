@@ -34,6 +34,7 @@ export const books = sqliteTable("books", {
   slug: text().unique().notNull(),
   description: text(),
   cover: text(),
+  file: text(),
   language: text().default("uk"),
   status: text({
     enum: ["draft", "published", "hidden", "completed"],
