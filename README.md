@@ -42,15 +42,13 @@ Users can:
 
 ## 🏠 Home Page
 
-> Replace with your screenshot.
-
 ![Home](./web/src/lib/assets/home.png)
 
 ---
 
 ## 📚 Browse Books
 
-![Browse](images/browse.png)
+![Browse](./web/src/lib/assets/browse.png)
 
 ---
 
@@ -68,8 +66,7 @@ Users can:
 
 ## 📖 Library
 
-![Library](./web/src/lib/assets/library-1.png)
-![Library](./web/src/lib/assets/library-2.png)
+![Library](./web/src/lib/assets/library.png)
 
 ---
 
