@@ -52,10 +52,11 @@
 			const data = await res.json();
 
 			if (!res.ok || !data.success) {
-				error = data.message;
+				error = data.message ?? 'Login failed';
 				return;
 			}
 
+			localStorage.setItem('token', data.token);
 			localStorage.setItem('user', JSON.stringify(data.user));
 
 			await goto('/library');

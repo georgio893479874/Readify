@@ -51,7 +51,7 @@
 			class="absolute right-4 bottom-4 left-4 translate-y-10 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
 		>
 			<button
-				on:click={() => goto(`/reader/${id}`)}
+				on:click={() => goto(`/books/${id}/read`)}
 				class="w-full rounded-2xl bg-violet-600 py-3 font-semibold text-white transition hover:bg-violet-700"
 			>
 				Read Now

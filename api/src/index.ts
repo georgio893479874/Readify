@@ -3,6 +3,7 @@ import { routes } from "./routes";
 import { createClient } from "@libsql/client";
 import { drizzle } from "drizzle-orm/libsql";
 import cors from "@elysiajs/cors";
+import jwt from "@elysiajs/jwt";
 
 const client = createClient({
   url: process.env.TURSO_DATABASE_URL!,
@@ -22,6 +23,10 @@ new Elysia({
       credentials: true
     })
   )
+  .use(jwt({
+    name: 'jwt',
+    secret: process.env.JWT_SECRET!
+  }))
   .use(routes)
   .listen(3000);
 
